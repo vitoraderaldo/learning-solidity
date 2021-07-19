@@ -18,7 +18,7 @@ describe('Inbox', () => {
     beforeEach(async () => {
         // Get a list of all accounts  
         accounts = await web3.eth.getAccounts()
-        // Defines the contract interface to web3
+        // Defines the contract interface (ABI) to web3
         contract = new web3.eth.Contract(JSON.parse(interface))
         // Creates the transaction data that represents the contract   
         const transaction = await contract.deploy({data: bytecode, arguments: [initialString]})
